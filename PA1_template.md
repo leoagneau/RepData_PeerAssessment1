@@ -54,6 +54,12 @@ hist(DailySteps, main="Histogram of Total Number of Steps Taken Each Day", xlab 
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
+Mean and median are then calculated:
+
+```r
+dailymean <- format(mean(DailySteps), big.mark=",", small.interval = 2)
+dailymedian <- format(median(DailySteps), big.mark=",", small.interval = 2)
+```
 And here are some statistics of the total number of steps taken per day:  
 Mean: **9,354.23**  
 Median: **10,395**
@@ -103,6 +109,12 @@ hist(DailySteps, main="Histogram of Total Number of Steps Taken Each Day", xlab 
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
+The new mean and median are calculated:
+
+```r
+NewDailyMean <- format(mean(DailySteps), big.mark=",", small.interval = 2)
+NewDailyMedian <- format(median(DailySteps), big.mark=",", small.interval = 2)
+```
 And the new statistics of the total number of steps taken per day are:  
 Mean: **10,766.19**  
 Median: **10,766.19**  

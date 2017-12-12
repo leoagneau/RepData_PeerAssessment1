@@ -30,7 +30,9 @@ Then we can plot the histogram of the total number of steps taken each day
 ```{r}
 hist(DailySteps, main="Histogram of Total Number of Steps Taken Each Day", xlab = "Daily Steps")
 ```
-```{r echo=FALSE}
+
+Mean and median are then calculated:
+```{r}
 dailymean <- format(mean(DailySteps), big.mark=",", small.interval = 2)
 dailymedian <- format(median(DailySteps), big.mark=",", small.interval = 2)
 ```
@@ -69,7 +71,9 @@ We now plot the histogram of the dataset:
 DailySteps <- sapply(split(NewAct$steps, NewAct$date), sum)
 hist(DailySteps, main="Histogram of Total Number of Steps Taken Each Day", xlab = "Daily Steps")
 ```
-```{r echo=FALSE}
+
+The new mean and median are calculated:
+```{r}
 NewDailyMean <- format(mean(DailySteps), big.mark=",", small.interval = 2)
 NewDailyMedian <- format(median(DailySteps), big.mark=",", small.interval = 2)
 ```
