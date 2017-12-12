@@ -80,6 +80,12 @@ plot(AvgIntSteps, type="l", xlab = "5-minute Interval", ylab = "Average Steps")
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
+Find which 5-minute interval contains the maximum number of steps:
+
+```r
+MaxInt <- names(which.max(AvgIntSteps))
+```
+The **835** 5-minute interval contains the maximum number of steps.
 
 ## Imputing missing values
 The total number of missing values is:
@@ -107,7 +113,7 @@ DailySteps <- sapply(split(NewAct$steps, NewAct$date), sum)
 hist(DailySteps, main="Histogram of Total Number of Steps Taken Each Day", xlab = "Daily Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 The new mean and median are calculated:
 
@@ -156,7 +162,7 @@ g <- ggplot(WeekIntSteps, aes(x=interval, y=steps))
 g+geom_line(color="blue") + facet_wrap(~ wday, nrow=2, ncol=1) + theme_light()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 
 

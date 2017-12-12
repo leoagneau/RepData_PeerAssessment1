@@ -52,6 +52,11 @@ Now we can plot the time series of the averaged 5-minute interval steps.
 plot(AvgIntSteps, type="l", xlab = "5-minute Interval", ylab = "Average Steps")
 ```
 
+Find which 5-minute interval contains the maximum number of steps:
+```{r}
+MaxInt <- names(which.max(AvgIntSteps))
+```
+The **`r MaxInt`** 5-minute interval contains the maximum number of steps.
 
 ## Imputing missing values
 The total number of missing values is:
